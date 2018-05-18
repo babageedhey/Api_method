@@ -140,7 +140,7 @@ $('.question').click(function(){
     )
     .done(function(data){
         var randomQuestion = data.results[0];
-        console.log(randomQuestion.question);
+        
         $('#category').text(randomQuestion.category);
         $('#question').text(randomQuestion.question);
         $('#answer').text(randomQuestion.correct_answer);
@@ -152,3 +152,28 @@ $('.question').click(function(){
     });
 })
 
+//Api call using axios
+//  $('.question').click(function(){
+//         var category = document.querySelector('#category');
+//         var question = document.querySelector('#question');
+//         var answer = document.querySelector('#answer');
+//         var level = document.querySelector('#level');
+//         var page = 'https://opentdb.com/api.php?amount=10';
+
+//         axios({
+//             method: 'GET',
+//             url: 'https://opentdb.com/api.php?amount=10'
+//         })
+        
+//         .then(function(data){
+//             console.log(data.results);
+//             var randomQuestion = data.results;
+//             $('#category').text(randomQuestion.category);
+//             $('#question').text(randomQuestion.question);
+//             $('#answer').text(randomQuestion.correct_answer);
+//             $('#level').text(randomQuestion.difficulty);
+//         })
+//         .catch(function(err){
+//             console.log(err);
+//         })
+//  })
